@@ -1,0 +1,142 @@
+﻿* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+.message {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+}
+
+.text {
+    font-size: 60px;
+    color: rgb(255, 50, 50);
+    font-family: 'Franklin Gothic';
+    text-shadow: 1px 1px 4px #000;
+}
+
+.message ul {
+    margin-top: 20px;
+}
+
+    .message ul li {
+        width: auto;
+        text-align: center;        
+        margin-right: 15px;    
+        display: inline-block;        
+        
+    }
+
+        .message ul li a {
+            font-family: 'Book Antiqua';
+            color: #fff;
+            font-size: 15px;
+            padding-left: 40px;
+            padding-right: 40px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            border: 2px solid rgb(255, 50, 50);
+            border-radius: 30px;
+            
+        }
+
+        .message ul li a:hover {
+            background-color: rgb(255,255,255);
+            cursor: pointer;
+            transition: 1s;
+            color: rgb(255, 50, 50);
+            
+        }
+
+/*Store*/
+.box-one {
+    width: 450px;
+    height: 350px;
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('images/phone/Yz0xJmhhc2g9NDIyNzlmYjAxMGFkMDQ2M2Q1NmMzY2FhODMyY2I2NGQ=.thumb.jpg');
+    background-position: center;
+    background-size: cover;
+    margin-right: 40px;
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.5);
+}
+.box-two {
+    width: 450px;
+    height: 350px;
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('images/phone/res_715358a18986473101cdc89447e4690e.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0px 40px;
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.5);
+}
+.box-three {
+    width: 450px;
+    height: 350px;
+    margin-left: 40px;
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('images/phone/61V3MgRj8LL._AC_SY450_.jpg');
+    background-size: cover;
+    background-position: center;
+    box-shadow: 10px 10px 15px rgba(255,255,255,0.5);
+}
+.container-boxes {
+    position: relative;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    display: flex;
+    justify-content: center;
+    width: 60%;
+}
+.container-boxes a{
+    position: absolute;
+    top: -15px;
+    margin-left: 5px;
+    color: rgb(255, 50, 50);
+    font-size: 20px;
+    text-shadow: 5px -3px 5px #000;
+    font-family: 'Comic Sans MS';
+    display: none;
+}.container-boxes h1{
+    position: absolute;
+    top: 0px;
+    margin-left: 15px;
+    color: rgb(255, 50, 50);
+    font-size: 30px;
+    text-shadow: 5px -3px 5px #000;
+    font-family: 'Comic Sans MS';
+    
+}
+.box-one:hover,
+.box-two:hover,
+.box-three:hover{
+    border: 1px solid transparent;
+    box-shadow: 5px 5px 10px rgba(255,255,255,0.5);
+    transform: translateY(-5%);
+    transition: 0.5s;
+}
+    .box-one:hover a,
+    .box-two:hover a,
+    .box-three:hover a {
+        display: block;
+        font-size: 30px;
+        font-weight: bold;
+        color:  #fbf9f9;
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        transition: 1.3s;
+        padding: 50px 30px;
+        transition: 0.5s;
+        border: 1px solid transparent;
+        border-radius: 15px;
+        box-shadow: 5px 10px 15px #000;
+    }
+    .box-one:hover h1,
+    .box-two:hover h1,
+    .box-three:hover h1{
+        display: none;
+    }
+
+

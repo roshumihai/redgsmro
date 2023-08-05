@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %}
+    About Page
+{% endblock %}
+
+{% block content %}
+    <div class="container-boxes">
+        <div class="box-one">
+            <div class="huse">
+                <h1 id="head_mk">Huse</h1>
+                <a href="{{url_for('huse_store')}}">Huse</a>
+            </div>
+        </div>
+        <div class="box-two">
+            <div class="inc">
+                <h1>Incarcatoare</h1>
+                <a href="{{ url_for('incarcatoare') }}">Incarcatoare</a>
+            </div>
+        </div>
+        <div class="box-three">
+            <div class="altele">
+                <h1>Altele</h1>
+                <a href="altele-store.html">Altele</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

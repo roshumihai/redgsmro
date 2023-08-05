@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block title %}
+  Market Place
+{% endblock %}
+
+{% block content %}
+  <h1 id="head_mk">Marketplace for phones</h1>
+    <table class="table table-hover table-dark">
+      <thead>
+        <tr>
+          <th scope="col"><a style="text-decoration: none; color: white;" id="atag" href="?sort_column=brand&sort_order=asc">Brand</a></th>
+          <th scope="col">Model</th>
+          <th scope="col"><a style="text-decoration: none; color: white;" href="?sort_column=quantity&sort_order=asc">Quantity</a></th>
+          <th scope="col"><a style="text-decoration: none; color: white;" href="?sort_column=price&sort_order=asc">Price</a></th>
+          <th scope="col">Details</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in items %}
+          <tr>
+            <td>{{ item.brand }}</td>
+            <td>{{ item.model }}</td>
+            <td>{{ item.quantity }}</td>
+            <td>{{ item.price }} RON</td>
+            <td>{{ item.Details }}</td>
+          </tr>
+        {% endfor %}
+        <tr>
+
+        </tr>
+      </tbody>
+    </table>
+{% endblock %}
+

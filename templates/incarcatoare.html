@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Huse
+{% endblock %}
+
+{% block content %}
+  <h1 id="head_mk">Incarcatoare</h1>
+  <table class="table table-hover table-dark">
+    <thead>
+      <tr>
+        <th scope="col">Brand</th>
+        <th scope="col">Tip</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Price</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for incarcator in incarcatoare %}
+      <tr>
+        <td {% if incarcator.quantity < 5 %}
+          style="color: #ff5544;"
+        {% endif %}>{{ incarcator.brand }}</td>
+        <td {% if incarcator.quantity < 5 %}
+          style="color: #ff5544;"
+        {% endif %}>{{ incarcator.tip }}</td>
+        <td {% if incarcator.quantity < 5 %}
+          style="color: #ff5544;"
+        {% endif %}>{{ incarcator.quantity }}</td>
+        <td {% if incarcator.quantity < 5 %}
+          style="color: #ff5544;"
+        {% endif %}>{{ incarcator.price }}RON</td>
+        <td {% if incarcator.quantity < 5 %}
+          style="color: #ff5544;"
+        {% endif %}>{{ incarcator.details }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+
+
+{% endblock %}

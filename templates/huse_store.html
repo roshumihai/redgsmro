@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Huse
+{% endblock %}
+
+{% block content %}
+  <h1 id="head_mk">Huse</h1>
+  <table class="table table-hover table-dark">
+    <thead>
+      <tr>
+        <th scope="col">Brand</th>
+        <th scope="col">Model</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Price</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for husa in huse %}
+      {% if husa.quantity < 5 %}
+        <tr style="background-color: red;">
+          {% else %}
+            <tr>
+      {% endif %}
+        <tr>
+          <td {% if husa.quantity < 5 %}
+          style="color: red; font-weight: bold;"
+        {% endif %}>{{ husa.brand }}</td>
+          <td {% if husa.quantity < 5 %}
+          style="color: red; font-weight: bold;"
+        {% endif %}>{{ husa.model }}</td>
+          <td {% if husa.quantity < 5 %}
+          style="color: red; font-weight: bold;"
+        {% endif %}>{{ husa.quantity }}</td>
+          <td {% if husa.quantity < 5 %}
+          style="color: red;"
+        {% endif %}>{{ husa.price }} RON</td>
+        <td {% if husa.quantity < 5 %}
+            style="color: red; font-weight: bold;"
+          {% endif %}>{{ husa.details }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+
+
+{% endblock %}
