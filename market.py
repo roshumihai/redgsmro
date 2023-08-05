@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, Response
 from operator import itemgetter
 import pandas as pd
 import openpyxl
+import os
 
 app = Flask(__name__)
 
@@ -47,3 +48,6 @@ def incarcatoare():
 @app.route('/contact')
 def contact():
     return render_template('contact.html')
+
+if __name__ == '__main__':
+    app.run(debug=True, host='0.0.0.0', port=os.environ.get('PORT', 5000))
